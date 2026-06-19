@@ -1,3 +1,7 @@
+#This is a School managing program for students, to keep track of their assignments and expenses
+
+#This is where default variables are defined
+
 print("Welcome to BLS School Manager APP.")
 assignment =  [ ["math", "incomplete"],
                 ["science", "incomplete"], 
@@ -9,7 +13,7 @@ assignment =  [ ["math", "incomplete"],
 expenses = []
 
 start = True
-
+#This block is where the program starts with a menu asking the student for the action they want to perform
 while start:
     print("\nMENU")
     print("1. Assignment To-Do List.")
@@ -18,6 +22,7 @@ while start:
 
     start1 = input("\nPlease select what you want to do: ")
 
+  #This block takes the student to the to-do list section while viewing default subjects and their status
     if start1 == "1":
 
         
@@ -25,7 +30,7 @@ while start:
             print(subject[0], subject[1], sep=":")
 
         action = True
- 
+ #This block allows the student to edit the default assignment list by adding or removing a subject form the list
         while action:
             action1 = input("Do you want to add or remove a subject from your assignment to-do list(Yes/No): ").lower()
             if action1 == "yes":
@@ -54,7 +59,7 @@ while start:
         for subject in assignment:
             print(subject[0], subject[1], sep=":")
                         
-            
+        #This block allows the user to change the status of the subjects in the updated list    
         print("\nAssignment Status\n")
 
         action3 = input("\nDo you want to update your Assignment (Yes/No)? ").lower()
@@ -81,14 +86,16 @@ while start:
         else:
             print("Invalid input")
 
-
+#This block displays the finished/final updated to-do list
         print("\nUpdated Assignment status\n")  
         for subject in assignment:
             print(subject[0], subject[1], sep=":")
-
+          
+#This block takes the student to the expense tracker system
     elif start1 == "2":
         
         track = True
+      #This block allows the user to add expenses or view the expenses added or to exit this block
         while track:
             decision = input("Do you want to add or view or exit expenses: ").lower()
 
@@ -100,7 +107,7 @@ while start:
                     expenses.append((category, amount))
                 else:
                     print("Enter amount in numeric format")
-
+#This block allows the user to view the expense list by category or an amount range
             elif decision == "view":
                 if not expenses:
                     print("There are no expenses to view")
@@ -132,13 +139,14 @@ while start:
                                 print(expense[0], expense[1], sep=":")
                     else:
                         print("Invalid view option")
-            
+       #This block is used to exit the expense section     
             elif decision == "exit":
                     track = False
                     print("Thank you for using BLS expense Tracker")
             
             else:
                 print("Please enter a valid option")
+  #This block is used to exit the program            
     elif start1 == "3":
         start = False
         print("Thank you for using BLS School Manager App")
