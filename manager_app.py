@@ -19,7 +19,6 @@ while start:
     print("1. Assignment To-Do List.")
     print("2. Expense Tracker.")
     print("3. Exit")
-
     start1 = input("\nPlease select what you want to do: ")
 
   #This block takes the student to the to-do list section while viewing default subjects and their status
