@@ -24,8 +24,6 @@ while start:
 
   #This block takes the student to the to-do list section while viewing default subjects and their status
     if start1 == "1":
-
-        
         for subject in assignment:
             print(subject[0], subject[1], sep=":")
 
@@ -93,7 +91,6 @@ while start:
           
 #This block takes the student to the expense tracker system
     elif start1 == "2":
-        
         track = True
       #This block allows the user to add expenses or view the expenses added or to exit this block
         while track:
